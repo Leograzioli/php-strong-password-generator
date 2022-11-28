@@ -1,14 +1,19 @@
 <?php 
 function rndLetter($length)
 {
-    $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $letters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!@#$%^&*()_+{}":?><,./;[]=-';
     $pw_array = '';
-    $i = 0;
-    while ($i < $length) {
+    while (strlen($pw_array) < $length) {
         $rnd = rand(0, strlen($letters) - 1);
-        $pw_array .= $letters[$rnd];
-        $i++;
+        if ($_GET["repeat"] === "no") {
+            if(!str_contains($pw_array, $letters[$rnd])) {
+                $pw_array .= $letters[$rnd];
+            }
+        } else {
+            $pw_array .= $letters[$rnd];
+        }
     }
+
     return $pw_array;
 }
 ?>

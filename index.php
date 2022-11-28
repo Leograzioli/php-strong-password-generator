@@ -40,12 +40,22 @@ if (!empty($_GET["pw-length"])) {
                     <label for="pw-length">Lunghezza Password:</label>
                     <input type="text" name="pw-length" id="pw-length">
                 </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <p for="repeat">Consenti ripetizioni caratteri:</p>
+                    <div class=" mt-2 ">
+                        <label for="repeat">Si</label>
+                        <input type="radio" id="repeat" name="repeat" value="si" class="mb-1">
+                        <label for="no-repeat">No</label>
+                        <input type="radio" id="no-repeat" name="repeat" value="no">
+                    </div>
+
+                </div>
                 <div>
                     <button class="btn btn-primary" type="submit">Send</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
 
                     <?php if (!empty($_GET["pw-length"])) { ?>
-                    <a href="response.php" class="btn btn-primary">Vedi Password</a>
+                        <a href="response.php" class="btn btn-primary">Vedi Password</a>
                     <?php } ?>
                 </div>
             </form>
