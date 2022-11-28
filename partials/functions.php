@@ -10,7 +10,7 @@ function rndLetter($length)
         } 
         
         if (isset($_GET["symbol"])) {
-            $letters .= "!@#$%^&*()_+{}:?><,./;[]=-";
+            $letters .= "!@#$%^&*+:?./=";
         } 
         
         if (isset($_GET["number"])) {
