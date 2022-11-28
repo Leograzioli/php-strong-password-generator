@@ -1,16 +1,17 @@
 <?php
 session_start();
 
-function rndLetter ($length) {
+function rndLetter($length)
+{
     $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $pw_array = '';
     $i = 0;
-    while( $i < $length) {
+    while ($i < $length) {
         $rnd = rand(0, strlen($letters) - 1);
         $pw_array .= $letters[$rnd];
-        $i++ ;
+        $i++;
     }
-    return $pw_array; 
+    return $pw_array;
 }
 
 if (isset($_GET["pw-length"])) {
@@ -39,12 +40,12 @@ if (isset($_GET["pw-length"])) {
 </head>
 
 <body>
-    <div class="container"> 
+    <div class="container">
         <div class="text-center mt-5">
             <h1 class="mb-2">Strong password generator</h1>
             <h2>Genera una password sicura:</h2>
-        </div> 
-        
+        </div>
+
         <div class="wrapper">
             <form action="index.php" method="GET">
                 <div class="d-flex justify-content-between">
