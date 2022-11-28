@@ -49,6 +49,19 @@ if (!empty($_GET["pw-length"])) {
                         <input type="radio" id="no-repeat" name="repeat" value="no">
                     </div>
 
+                    
+                </div>
+                <div class="d-flex justify-content-end">
+                    <label for="number" class="me-1">only numbers:</label>
+                    <input type="radio" id="number" name="number" value="number">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <label for="letter" class="me-1">only letters:</label>
+                    <input type="radio" id="letter" name="number" value="letter">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <label for="symbol" class="me-1">only symbols:</label>
+                    <input type="radio" id="symbol" name="number" value="symbol">
                 </div>
                 <div>
                     <button class="btn btn-primary" type="submit">Send</button>
