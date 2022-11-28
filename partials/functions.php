@@ -1,15 +1,23 @@
 <?php 
 function rndLetter($length)
 {
-    if(!isset($_GET["number"])) {
+    $letters = "" ;
+    if(!isset($_GET["number"]) && !isset($_GET["letter"]) && !isset($_GET["symbol"])) {
         $letters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!@#$%^&*()_+{}":?><,./;[]=-';
-    } elseif ($_GET["number"] === "letter") {
-        $letters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ' ;
-    } elseif ($_GET["number"] === "symbol") {
-        $letters = "!@#$%^&*()_+{}:?><,./;[]=-";
-    } elseif ($_GET["number"] === "number") {
-        $letters = "0123456789";
+    } else {
+        if (isset($_GET["letter"])) {
+            $letters .= 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ' ;
+        } 
+        
+        if (isset($_GET["symbol"])) {
+            $letters .= "!@#$%^&*()_+{}:?><,./;[]=-";
+        } 
+        
+        if (isset($_GET["number"])) {
+            $letters .= "0123456789";
+        }
     }
+   
 
     $pw_array = '';
     while (strlen($pw_array) < $length) {
