@@ -10,15 +10,20 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <h2>your password is:
-            <?php
-            echo $_SESSION["pw-lenght"];
-            ?>
+        <h2> your password is:
+            <span class="text-danger">
+                <?php
+                echo $_SESSION["pw-lenght"];
+                ?>
+            </span>
         </h2>
         <a href="index.php">return to home</a>
     </div>
