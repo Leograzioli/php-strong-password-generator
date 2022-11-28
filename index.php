@@ -1,24 +1,11 @@
 <?php
+include __DIR__ . "/partials/functions.php";
 session_start();
-
-function rndLetter($length)
-{
-    $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-    $pw_array = '';
-    $i = 0;
-    while ($i < $length) {
-        $rnd = rand(0, strlen($letters) - 1);
-        $pw_array .= $letters[$rnd];
-        $i++;
-    }
-    return $pw_array;
-}
 
 if (!empty($_GET["pw-length"])) {
     $length = rndLetter($_GET["pw-length"]);
     $_SESSION["pw-lenght"] = $length;
 }
-
 
 ?>
 
