@@ -3,7 +3,7 @@ function rndLetter($length)
 {
     $letters = "" ;
     if(!isset($_GET["number"]) && !isset($_GET["letter"]) && !isset($_GET["symbol"])) {
-        $letters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!@#$%^&*()_+{}":?><,./;[]=-';
+        $letters = 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789!@#$%^&*+:?./=';
     } else {
         if (isset($_GET["letter"])) {
             $letters .= 'abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ' ;
