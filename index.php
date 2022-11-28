@@ -14,8 +14,9 @@ function rndLetter($length)
     return $pw_array;
 }
 
-if (isset($_GET["pw-length"])) {
+if (!empty($_GET["pw-length"])) {
     $length = rndLetter($_GET["pw-length"]);
+    $_SESSION["pw-lenght"] = $length;
 }
 
 
@@ -55,13 +56,13 @@ if (isset($_GET["pw-length"])) {
                 <div>
                     <button class="btn btn-primary" type="submit">Send</button>
                     <button type="reset" class="btn btn-secondary">Reset</button>
+
+                    <?php if (!empty($_GET["pw-length"])) { ?>
+                    <a href="response.php" class="btn btn-primary">Vedi Password</a>
+                    <?php } ?>
                 </div>
             </form>
-            <?php
-            if (isset($_GET["pw-length"])) {
-                echo $length;
-            }
-            ?>
+
         </div>
 
     </div>
