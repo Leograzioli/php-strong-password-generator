@@ -44,7 +44,7 @@ if (!empty($_GET["pw-length"])) {
                     <p for="repeat">Consenti ripetizioni caratteri:</p>
                     <div class=" mt-2 ">
                         <label for="repeat">Si</label>
-                        <input type="radio" id="repeat" name="repeat" value="si" class="mb-1">
+                        <input type="radio" id="repeat" name="repeat" checked value="si" class="mb-1">
                         <label for="no-repeat">No</label>
                         <input type="radio" id="no-repeat" name="repeat" value="no">
                     </div>
