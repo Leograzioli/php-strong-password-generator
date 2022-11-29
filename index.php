@@ -72,10 +72,7 @@ if (!empty($_GET["pw-length"])) {
                     <?php } ?>
                 </div>
             </form>
-
         </div>
-
     </div>
 </body>
-
 </html>

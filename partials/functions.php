@@ -19,18 +19,18 @@ function rndLetter($length)
     }
    
 
-    $pw_array = '';
-    while (strlen($pw_array) < $length) {
+    $pw_string = '';
+    while (strlen($pw_string) < $length) {
         $rnd = rand(0, strlen($letters) - 1);
         if ($_GET["repeat"] === "no") {
-            if(!str_contains($pw_array, $letters[$rnd])) {
-                $pw_array .= $letters[$rnd];
+            if(!str_contains($pw_string, $letters[$rnd])) {
+                $pw_string .= $letters[$rnd];
             }
         } else {
-            $pw_array .= $letters[$rnd];
+            $pw_string .= $letters[$rnd];
         }
     }
 
-    return $pw_array;
+    return $pw_string;
 }
 ?>
