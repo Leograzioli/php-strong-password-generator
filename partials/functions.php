@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 function rndLetter($length)
 {
     $letters = "" ;
@@ -30,7 +32,8 @@ function rndLetter($length)
             $pw_string .= $letters[$rnd];
         }
     }
-
+    $_SESSION["pw-lenght"] = $pw_string;
+    header("Location: ./response.php");
     return $pw_string;
 }
 ?>
